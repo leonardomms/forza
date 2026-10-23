@@ -52,7 +52,7 @@ function ConsultantCard({ consultant, href }: { consultant: Consultant; href?: s
   )
 
   if (href) {
-    return <a className="consultant-card consultant-card--interactive" data-reveal href={href} target="_blank" rel="noopener noreferrer" aria-label={`Entrar em contato com ${consultant.name}`}>{cardContent}</a>
+    return <a className="consultant-card consultant-card--interactive" data-reveal href={href} target="_blank" rel="noopener noreferrer" aria-label={`Entrar em contato com ${consultant.name}`} onClick={(event) => { if (event.detail > 0) event.currentTarget.blur() }}>{cardContent}</a>
   }
 
   return (
