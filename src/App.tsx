@@ -29,7 +29,7 @@ export const integrations: { quoteFormEndpoint?: string } = {}
 export default function App() {
   return (
     <>
-      <div className="intro">
+      <div className="intro" id="top">
         <div className="intro__image" aria-hidden="true"><img src={hoses} alt="" /></div>
         <div className="intro__gradient" aria-hidden="true" />
         <Header destinations={destinations} />

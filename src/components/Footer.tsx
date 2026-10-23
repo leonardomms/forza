@@ -33,7 +33,7 @@ export function Footer({ destinations }: FooterProps) {
 
         <nav className="site-footer__group" aria-label="Navegação do rodapé">
           <p className="site-footer__label">NAVEGAÇÃO</p>
-          <FooterLink href="#hero-title">Início</FooterLink>
+          <FooterLink href="#top">Início</FooterLink>
           <FooterLink href={destinations.solutions ?? '#applications-title'}>Soluções</FooterLink>
           <FooterLink href={destinations.sobre}>Sobre</FooterLink>
         </nav>

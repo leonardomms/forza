@@ -49,7 +49,7 @@ export function Header({ destinations }: Props) {
           <span aria-hidden="true" />
         </button>
         <nav id="primary-navigation" className={`site-header__nav${isMenuOpen ? ' site-header__nav--open' : ''}`} aria-label="Navegação principal">
-          <Button href={destinations.home ?? '#hero-title'} onClick={closeMenu}>Início</Button>
+          <Button href={destinations.home ?? '#top'} onClick={closeMenu}>Início</Button>
           <Button href={destinations.solutions ?? '#applications-title'} onClick={closeMenu}>Soluções</Button>
           <Button href={destinations.contact ?? '#contact-title'} onClick={closeMenu}>Contato</Button>
           <Button href={destinations.quote ?? '#quote-title'} variant="primary" onClick={closeMenu}>Orçamento</Button>
