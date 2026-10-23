@@ -9,6 +9,7 @@
 :root { font-family: 'Helvetica', Arial, sans-serif; color: #fff; background: #fff; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+html.lenis-enabled { scroll-behavior: auto; }
 :is(#hero-title, #applications-title, #differentials-title, #contact-title, #quote-title) { scroll-margin-top: 96px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; min-width: 320px; }
