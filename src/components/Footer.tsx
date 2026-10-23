@@ -23,6 +23,8 @@ function FooterLink({ href, children, className = '' }: FooterLinkProps) {
 }
 
 export function Footer({ destinations }: FooterProps) {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="site-footer">
       <div className="site-footer__top">
@@ -46,7 +48,7 @@ export function Footer({ destinations }: FooterProps) {
 
       </div>
 
-      <p className="site-footer__copyright">© 2026 Forza Flex. Todos os direitos reservados.</p>
+      <p className="site-footer__copyright">© {currentYear} Forza Flex. Todos os direitos reservados.</p>
     </footer>
   )
 }
