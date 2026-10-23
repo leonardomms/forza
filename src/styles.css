@@ -75,7 +75,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .application-card p, .application-card__copy > span { position: relative; z-index: 1; margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; }
 .application-card__image { position: absolute; display: block; max-width: none; pointer-events: none; }
 .application-card--agriculture { background: linear-gradient(180deg, #068bf2 0%, #a9daff 100%); color: #fff; }
-.application-card__image--agriculture { left: -223.75px; top: 63px; width: 532.36px; height: 299.61px; object-fit: contain; object-position: right center; }
+.application-card__image--agriculture { left: -240.92px; top: 86px; width: 543.92px; height: 216.47px; object-fit: cover; object-position: center center; }
 .application-card--industry, .application-card--hydraulic { background: #f8f8f8; color: #0a0a0a; }
 .application-card--industry p, .application-card--hydraulic p { color: rgba(0,0,0,.6); }
 .application-card__image--industry { position: absolute; left: 0; top: 0; display: flex; align-items: center; justify-content: center; width: 275px; height: 275px; }
@@ -277,6 +277,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .site-footer__social { flex: 0 0 64px; }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .application-card__image--agriculture {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
 @media (max-width: 767px) {
   :is(#hero-title, #applications-title, #differentials-title, #contact-title, #quote-title) { scroll-margin-top: 80px; }
 
@@ -317,7 +332,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .applications__description { font-size: 18px; }
   .applications__cards { grid-template-columns: 1fr; grid-template-rows: none; }
   .application-card { aspect-ratio: auto; height: 280px; padding: 26px; }
-  .application-card__image--agriculture { left: -155px; top: 58px; width: 540px; height: auto; }
+  .application-card__image--agriculture {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
   .application-card__image--hydraulic { top: 12px; width: 112%; height: auto; }
   .applications__whatsapp .button { width: 205px; }
   .applications__whatsapp { right: 20px; bottom: 20px; }

@@ -1,4 +1,4 @@
-import agriculture from '../../assets/agricultura.png'
+import agriculture from '../../assets/agricultura_2.png'
 import industry from '../../assets/industria.png'
 import hydraulicSystems from '../../assets/sistemas.png'
 import contactArrow from '../../assets/application-contact-arrow.svg'
