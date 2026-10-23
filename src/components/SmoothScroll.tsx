@@ -8,27 +8,22 @@ export function SmoothScroll({ children }: Props) {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
     const mobileViewport = window.matchMedia('(max-width: 767px)')
 
-    if (reducedMotion.matches || mobileViewport.matches) return
+    if (reducedMotion.matches || mobileViewport.matches) {
+      return
+    }
 
     const lenis = new Lenis({
       anchors: true,
-      duration: 0.85,
+      autoRaf: true,
+      lerp: 0.1,
       smoothWheel: true,
       syncTouch: false,
-      wheelMultiplier: 0.95,
+      wheelMultiplier: 0.85,
     })
 
-    let frame = 0
-    const raf = (time: number) => {
-      lenis.raf(time)
-      frame = window.requestAnimationFrame(raf)
-    }
-
     document.documentElement.classList.add('lenis-enabled')
-    frame = window.requestAnimationFrame(raf)
 
     return () => {
-      window.cancelAnimationFrame(frame)
       lenis.destroy()
       document.documentElement.classList.remove('lenis-enabled')
     }

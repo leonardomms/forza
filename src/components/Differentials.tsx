@@ -30,14 +30,14 @@ export function Differentials() {
         <div className="differentials__overlay" aria-hidden="true" />
 
         <div className="differentials__content">
-          <header className="differentials__intro">
+          <header className="differentials__intro" data-reveal>
             <p className="differentials__eyebrow">Diferenciais</p>
             <h2 id="differentials-title">Por que escolher a Forza Flex?</h2>
           </header>
 
           <ul className="differentials__list">
             {differentials.map(({ icon, iconClassName, title, description }) => (
-              <li className="differentials__item" key={icon}>
+              <li className="differentials__item" key={icon} data-reveal>
                 <span className="differentials__icon" aria-hidden="true">
                   <img className={iconClassName} src={icon} alt="" />
                 </span>

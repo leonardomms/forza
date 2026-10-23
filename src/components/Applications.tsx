@@ -33,13 +33,13 @@ export function Applications({ destinations }: Props) {
     <section className="applications" aria-labelledby="applications-title">
       <div className="applications__content">
         <div className="applications__cards">
-          <article className="application-card application-card--agriculture">
+          <article className="application-card application-card--agriculture" data-reveal>
             <img className="application-card__image application-card__image--agriculture" src={agriculture} alt="" />
             <h3>Agricultura</h3>
             <p>Mangueiras para pulverização e atividades agrícolas.</p>
           </article>
 
-          <article className="application-card application-card--industry">
+          <article className="application-card application-card--industry" data-reveal>
             <div className="application-card__image--industry">
               <div className="application-card__image--industry-inner">
                 <img src={industry} alt="" />
@@ -49,7 +49,7 @@ export function Applications({ destinations }: Props) {
             <p>Soluções para condução de fluidos e processos industriais.</p>
           </article>
 
-          <article className="application-card application-card--hydraulic">
+          <article className="application-card application-card--hydraulic" data-reveal>
             <img className="application-card__image application-card__image--hydraulic" src={hydraulicSystems} alt="" />
             <h3>Sistemas hidráulicos</h3>
             <p>Mangueiras e conexões para equipamentos hidráulicos.</p>
@@ -58,7 +58,7 @@ export function Applications({ destinations }: Props) {
           <ContactCard href={destinations.applicationContact} />
         </div>
 
-        <div className="applications__intro">
+        <div className="applications__intro" data-reveal>
           <p className="applications__eyebrow">SOLUÇÕES</p>
           <h2 id="applications-title">Soluções que acompanham a força do seu trabalho.</h2>
           <p className="applications__description">Cada operação possui necessidades específicas. Por isso, oferecemos soluções para diferentes aplicações e segmentos.</p>

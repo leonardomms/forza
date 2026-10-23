@@ -32,7 +32,7 @@ function ConsultantCard({ consultant, href }: { consultant: Consultant; href?: s
   )
 
   return (
-    <article className={`consultant-card${href ? ' consultant-card--interactive' : ''}`}>
+      <article className={`consultant-card${href ? ' consultant-card--interactive' : ''}`} data-reveal>
       <img className={`consultant-card__portrait ${consultant.imageClassName}`} src={consultant.image} alt="" />
       <div className="consultant-card__content">
         <div className="consultant-card__identity">
@@ -57,7 +57,7 @@ function ConsultantCard({ consultant, href }: { consultant: Consultant; href?: s
 export function Contact({ destinations }: { destinations: Destinations }) {
   return (
     <section className="contact" aria-labelledby="contact-title">
-      <header className="contact__intro">
+      <header className="contact__intro" data-reveal>
         <div className="contact__heading">
           <p className="contact__eyebrow">Contato</p>
           <h2 id="contact-title">Seu negócio precisa de força. A gente conecta você à solução.</h2>

@@ -48,7 +48,7 @@ export function QuoteForm({ endpoint }: { endpoint?: string }) {
 
   return (
     <section className="quote" aria-labelledby="quote-title">
-      <div className="quote__panel">
+      <div className="quote__panel" data-reveal>
         <div className="quote__intro">
           <h2 id="quote-title">Não encontrou o que procura?</h2>
           <p>Preencha os dados e a nossa equipe entrará em contato.</p>
