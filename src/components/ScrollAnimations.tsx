@@ -5,7 +5,7 @@ type Props = { children: ReactNode }
 export function ScrollAnimations({ children }: Props) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    const enabled = params.get('animations') === 'on'
+    const enabled = params.get('animations') !== 'off'
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     if (!enabled || reducedMotion) return
