@@ -22,7 +22,7 @@ function ContactCard({ href }: { href?: string }) {
   )
 
   if (href) {
-    return <a className="application-card application-card--contact" href={href}>{content}</a>
+    return <a className="application-card application-card--contact" href={href} target="_blank" rel="noopener noreferrer">{content}</a>
   }
 
   return <button className="application-card application-card--contact" type="button">{content}</button>

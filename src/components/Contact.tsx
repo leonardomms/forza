@@ -31,8 +31,8 @@ function ConsultantCard({ consultant, href }: { consultant: Consultant; href?: s
     </>
   )
 
-  return (
-      <article className={`consultant-card${href ? ' consultant-card--interactive' : ''}`} data-reveal>
+  const cardContent = (
+    <>
       <img className={`consultant-card__portrait ${consultant.imageClassName}`} src={consultant.image} alt="" />
       <div className="consultant-card__content">
         <div className="consultant-card__identity">
@@ -41,15 +41,23 @@ function ConsultantCard({ consultant, href }: { consultant: Consultant; href?: s
         </div>
 
         {href ? (
-          <a className="consultant-card__link" href={href} target="_blank" rel="noopener noreferrer" aria-label={`Entrar em contato com ${consultant.name}`}>
-            {linkContent}
-          </a>
+          <span className="consultant-card__link">{linkContent}</span>
         ) : (
           <button className="consultant-card__link" type="button" aria-disabled="true" aria-label={`Contato de ${consultant.name} ainda não configurado`}>
             {linkContent}
           </button>
         )}
       </div>
+    </>
+  )
+
+  if (href) {
+    return <a className="consultant-card consultant-card--interactive" data-reveal href={href} target="_blank" rel="noopener noreferrer" aria-label={`Entrar em contato com ${consultant.name}`}>{cardContent}</a>
+  }
+
+  return (
+    <article className="consultant-card" data-reveal>
+      {cardContent}
     </article>
   )
 }

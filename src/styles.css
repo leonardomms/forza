@@ -144,6 +144,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .consultant-card:hover .consultant-card__link[href]:hover, .consultant-card:focus-within .consultant-card__link[href]:hover { color: #fff; }
 .consultant-card:hover .consultant-card__arrow--default, .consultant-card:focus-within .consultant-card__arrow--default { opacity: 0; }
 .consultant-card:hover .consultant-card__arrow--hover, .consultant-card:focus-within .consultant-card__arrow--hover { opacity: 1; }
+.consultant-card--interactive:focus-visible { outline: 3px solid #068bf2; outline-offset: 3px; }
 
 .quote { height: 568px; padding: 0 120px 80px; background: #fff; color: #0a0a0a; }
 .quote__panel { display: flex; align-items: flex-start; gap: 64px; width: 1200px; max-width: 100%; height: 488px; margin-inline: auto; padding: 40px; border-radius: 32px; background: #f7f7f7; }
@@ -190,7 +191,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer__social-link > img, .site-footer__instagram-mark, .site-footer__instagram-mark > img { display: block; width: 24px; height: 24px; }
 .site-footer__instagram-mark { position: relative; overflow: hidden; }
 .site-footer__instagram-mark > img { position: absolute; inset: 0; max-width: none; object-fit: contain; }
-.site-footer__copyright { width: 1200px; max-width: 100%; margin: 0 auto; text-align: center; font-family: Inter, sans-serif; font-size: 16px; font-weight: 500; line-height: 24px; color: rgba(255,255,255,.6); }
+.site-footer__copyright { width: 1200px; max-width: 100%; margin: 0 auto; text-align: center; font-family: Inter, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; color: rgba(255,255,255,.6); }
 
 @media (max-width: 1439px) {
   .site-header__inner { padding-right: 40px; padding-left: 40px; }

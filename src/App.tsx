@@ -13,12 +13,13 @@ export type LinkKey = 'home' | 'solutions' | 'contact' | 'quote' | 'products' | 
 // Supply real destinations as they are approved. Missing destinations remain disabled.
 const whatsappMessage = encodeURIComponent('Olá! Visitei o site da Forza Flex e gostaria de solicitar um orçamento.')
 const whatsappDefault = `https://wa.me/51980186359?text=${whatsappMessage}`
-const whatsappDiego = `https://wa.me/55997100924?text=${whatsappMessage}`
+const whatsappDiego = `https://wa.me/559997100924?text=${whatsappMessage}`
 
 export const destinations: Partial<Record<LinkKey, string>> = {
   whatsapp: whatsappDefault,
   quote: whatsappDefault,
   products: '#applications-title',
+  applicationContact: whatsappDefault,
   instagram: 'https://www.instagram.com/forzaflexmangueiras/',
   consultantGuilherme: whatsappDefault,
   consultantMaicon: whatsappDefault,
