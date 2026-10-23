@@ -262,6 +262,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .contact__description { white-space: normal; }
   .contact__cards { flex-direction: column; height: auto; gap: 16px; }
   .consultant-card { flex: none; width: 100%; }
+  .consultant-card__portrait--guilherme, .consultant-card__portrait--maicon, .consultant-card__portrait--diego { left: auto; right: 0; }
 
   .quote { height: auto; padding: 0 40px 72px; }
   .quote__panel { flex-direction: column; height: auto; padding: 40px; }
